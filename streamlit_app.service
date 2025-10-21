@@ -1,0 +1,18 @@
+[Unit]
+Description=VNPOST AI Assistant Streamlit App
+After=network.target
+
+[Service]
+Type=simple
+User=dmst_ai
+Group=dmst_ai
+WorkingDirectory=/home/dmst_ai/trunglx/mtpv2
+Environment=PATH=/home/dmst_ai/miniconda3/envs/myenv/bin
+ExecStart=/home/dmst_ai/miniconda3/envs/myenv/bin/python -m streamlit run ui.py --server.port 8501 --server.address 0.0.0.0 --server.headless true --server.baseUrlPath /mtpv2 --server.enableCORS false --server.enableWebsocketCompression false
+Restart=always
+RestartSec=60
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
