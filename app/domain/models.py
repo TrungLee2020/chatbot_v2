@@ -7,7 +7,7 @@ from typing import List, Dict, Optional, Any
 
 
 # ============================================================================
-# Chat API Models (from app_new.py)
+# Chat API Models
 # ============================================================================
 
 class ChatHistoryItem(BaseModel):
@@ -60,7 +60,7 @@ class ChatResponse(BaseModel):
 
 
 # ============================================================================
-# RAG API Models (from query_server_new.py)
+# RAG API Models
 # ============================================================================
 
 class QueryRequest(BaseModel):
